@@ -16,9 +16,11 @@ body{
     margin: 100px auto;
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 10px;
-    column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(200px, auto);
+   /* justify-items: baseline; */
+   /* align-items: center; */
 }
 
 .item{
@@ -27,4 +29,17 @@ body{
     font-size: 20px;
     padding: 20px;
     border: 5px solid skyblue;
+    
+}
+
+.item:nth-of-type(1){
+    grid-column-start: 1;
+   grid-column-end: 3;
+}
+.item:nth-of-type(4){
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.item:nth-of-type(5){
+    grid-row: 3/5;
 }
